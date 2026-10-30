@@ -69,7 +69,7 @@ body{display:grid;place-items:center}
    ========================================================================= */
 :root{--w:min(100vw,calc(100dvh*.56));
  --gold:#8a5d1e;--ink:#3b2610;--soft:#5e4224;--haldi:#a8650a;--ease:cubic-bezier(.2,.7,.2,1);
- --seal:url(img/8991debe33.webp);--n1:url(img/558fd2f7f7.webp);--n2:url(img/92bd5f5dea.webp);--amp:url(img/01ff14057b.webp);--couple:url(img/38dbd36118.webp);--paper:url(img/b90bbd08ac.webp);--ganesha:url(img/04eb5898e1.webp);--crown:url(img/412224dedc.webp);--base:url(img/44978dea03.webp);--toran:url(img/b5af8e2aab.webp);--elephant:url(img/dbc5f670f9.webp);--peacock:url(img/2d43692c6e.webp);--corner:url(img/d3acd6f320.webp);--family:url(img/d67e2535f2.webp);--woman:url(img/49a6779f99.webp);--man:url(img/3a27c98b34.webp);--haldi:url(img/5be8a888f0.webp);--kalash:url(img/e378f15225.webp);--diya:url(img/76e7ace21e.webp);--jharokha:url(img/ce360bbb09.webp);--mundavalya:url(img/8be7aeafc5.webp);--div:url(img/f479d16fc0.webp);--finial:url(img/ecb5958d17.webp);}
+ --seal:url(img/8991debe33.webp);--n1:url(img/558fd2f7f7.webp);--n2:url(img/92bd5f5dea.webp);--amp:url(img/01ff14057b.webp);--couple:url(img/38dbd36118.webp);--paper:url(img/b90bbd08ac.webp);--shrineH:url(img/219b1abf67.webp);--shrineS:url(img/d21bb243bd.webp);--bowl:url(img/fc1a710e58.webp);--kalash2:url(img/84018e16dd.webp);--dcHLp:url(img/7350c6a8e0.webp);--dcHGp:url(img/e7a7971a8e.webp);--dcWLp:url(img/ba07fca705.webp);--dcWGp:url(img/8fdcc3e31e.webp);--ganesha:url(img/04eb5898e1.webp);--crown:url(img/412224dedc.webp);--base:url(img/44978dea03.webp);--toran:url(img/b5af8e2aab.webp);--elephant:url(img/dbc5f670f9.webp);--peacock:url(img/2d43692c6e.webp);--corner:url(img/d3acd6f320.webp);--family:url(img/d67e2535f2.webp);--woman:url(img/49a6779f99.webp);--man:url(img/3a27c98b34.webp);--haldi:url(img/5be8a888f0.webp);--kalash:url(img/e378f15225.webp);--diya:url(img/76e7ace21e.webp);--jharokha:url(img/ce360bbb09.webp);--mundavalya:url(img/8be7aeafc5.webp);--div:url(img/f479d16fc0.webp);--finial:url(img/ecb5958d17.webp);}
 @media (max-width:600px){:root{--w:100vw}}
 html,body{background:#f3ead8}
 .stage{width:var(--w);height:100dvh;aspect-ratio:auto;perspective:none;scrollbar-width:none;background:#f3ead8}
@@ -216,6 +216,42 @@ h2{margin:0;font:500 8.4cqw/1.15 'Playfair Display',Georgia,serif;letter-spacing
 .finale-wrap{position:relative;width:100%;display:flex;justify-content:center;padding-bottom:4cqw}
 .finale-wrap .pk{-webkit-mask:linear-gradient(#000 62%,transparent 96%),linear-gradient(90deg,transparent,#000 22%);-webkit-mask-composite:source-in;mask:linear-gradient(#000 62%,transparent 96%) intersect,linear-gradient(90deg,transparent,#000 22%);position:absolute;bottom:0;width:26cqw;aspect-ratio:.611;background:var(--peacock) center bottom/contain no-repeat;z-index:2}
 .finale-wrap .pk.lf{left:-6cqw}.finale-wrap .pk.rt{right:-6cqw;scale:-1 1}
+
+/* consistent rhythm */
+.sec{padding:26cqw 9cqw 14cqw;gap:3.2cqw}
+.sec>h2{margin-top:1cqw}
+/* client assets */
+.bowl{width:50cqw;aspect-ratio:1.055;background-image:var(--bowl)}
+.kal{width:50cqw;aspect-ratio:1.152;background-image:var(--kalash2)}
+.dc-ico{width:30cqw;aspect-ratio:1.1}
+/* celebrations: line on the left, the shrine rides it, details on the right */
+.tl3{position:relative;width:100%;display:grid;gap:22cqw;padding:6cqw 0 10cqw;text-align:left}
+.tl3 .line,.tl3 .fill{position:absolute;left:15cqw;top:12cqw;width:2px;margin-left:-1px}
+.tl3 .line{bottom:22cqw;background:repeating-linear-gradient(#9a6a2680 0 1cqw,transparent 1cqw 2cqw)}
+.tl3 .fill{height:calc(var(--p,0)*(100% - 34cqw));background:linear-gradient(#e3c27a,#8a5d1e)}
+.tl3 .trav{position:absolute;z-index:2;left:15cqw;top:calc(12cqw + var(--p,0)*(100% - 34cqw));width:27cqw;height:38cqw;margin:-7cqw 0 0 -13.5cqw;perspective:80cqw}
+.tl3 .trav .in2{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateY(calc(var(--f,0)*180deg))}
+.tl3 .trav .a{position:absolute;inset:0;background-position:center top;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.tl3 .trav .f1{background-image:var(--shrineH);animation:sway 5s ease-in-out infinite;transform-origin:50% 0}
+.tl3 .trav .f2{background-image:var(--shrineS);transform:rotateY(180deg)}
+.row3{position:relative;padding-left:32cqw;min-height:34cqw}
+.row3 .dot{position:absolute;left:15cqw;top:12cqw;width:4cqw;height:4cqw;margin:-2cqw 0 0 -2cqw;border-radius:50%;background:radial-gradient(circle at 35% 30%,#f1d991,#a77a33 60%,#7c531c);box-shadow:0 0 0 1.2cqw #f3ead8}
+.row3 .t{display:grid;gap:.8cqw}
+.row3 .time{font:500 9cqw/1 'Playfair Display',Georgia,serif;color:var(--ink)}
+.row3 .orn{width:34cqw;aspect-ratio:8.316;background:var(--div) left center/contain no-repeat}
+.row3 .name{font:600 4.8cqw/1.2 'Playfair Display',Georgia,serif;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.row3.haldi .name{color:var(--haldi)}
+.row3 .sub{font-size:5cqw;line-height:1.3;color:var(--soft)}
+/* dress code: heading stays, ladies and gentlemen take turns */
+.cyc{display:grid;width:100%}
+.slide{grid-area:1/1;display:grid;justify-items:center;gap:2.4cqw;animation:turn 12s ease-in-out infinite}
+.slide+.slide{animation-delay:-6s}
+@keyframes turn{0%,44%{opacity:1;transform:none}50%,94%{opacity:0;transform:translateX(-2cqw)}100%{opacity:1;transform:none}}
+.pill{font:600 3.8cqw/1 'Playfair Display',Georgia,serif;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);padding:2.6cqw 6cqw;border-radius:1cqw;background:#f7e4dc;box-shadow:inset 0 0 0 1px #d9b9a6}
+.dc.haldi .pill{background:#fbefc4;box-shadow:inset 0 0 0 1px #e2c56c}
+.desc{min-height:15cqw;padding:0 2cqw}
+.ppl{width:108cqw;max-width:108cqw;margin:0 -9cqw;aspect-ratio:1.31;background:center bottom/contain no-repeat}
+@media (prefers-reduced-motion:reduce){.slide{animation:none}.slide+.slide{display:none}}
 </style></head><body>
 <main class="stage" id="stage"><div class="env" id="env">
   <div class="l lining"></div>
@@ -255,7 +291,6 @@ h2{margin:0;font:500 8.4cqw/1.15 'Playfair Display',Georgia,serif;letter-spacing
 
     <!-- THE COUNTDOWN -->
     <section class="sec">
-      <div class="crown dr"></div>
       <h2 class="rv">The Auspicious Moment Approaches</h2>
       <div class="cd-stage">
         <i class="hang lf sway"></i><i class="hang rt sway"></i>
@@ -275,23 +310,22 @@ h2{margin:0;font:500 8.4cqw/1.15 'Playfair Display',Georgia,serif;letter-spacing
       </div>
     </section>
 
-    <!-- THE CELEBRATIONS: icon + line on the left, time and event on the right -->
+    <!-- THE CELEBRATIONS: the hanging haldi shrine rides the line and turns into the shankh shrine -->
     <section class="sec" id="sTl">
       <div class="toran a sway"></div>
       <p class="scr rv">the</p>
       <h2 class="rv" style="--d:.1s;margin-top:-3cqw">Celebrations</h2>
-      <div class="tl2" id="tl">
+      <div class="tl3" id="tl">
         <i class="line"></i><i class="fill"></i>
-        <div class="row haldi rv"><i class="ico" id="ic1" style="background-image:var(--haldi)"></i><i class="dot"></i>
-          <div class="t"><p class="k">Wed · 25 November</p><p class="time">7:00 PM</p><i class="orn"></i><p class="name">Haldi Sohala</p><p class="sub">Groom’s Residence, Kalwa (W)</p></div></div>
-        <div class="row rv"><i class="ico" id="ic2" style="background-image:var(--kalash)"></i><i class="dot"></i>
-          <div class="t"><p class="k">Thu · 26 November</p><p class="time">12:14 PM</p><i class="orn"></i><p class="name">The Wedding</p><p class="sub">The Palace Banquets, Mulund (W)</p></div></div>
+        <div class="trav"><div class="in2"><div class="a f1"></div><div class="a f2"></div></div></div>
+        <div class="row3 haldi rv"><i class="dot"></i><div class="t"><p class="k">Wed · 25 November 2026</p><p class="time">7:00 PM</p><i class="orn"></i><p class="name">Haldi Sohala</p><p class="sub">Groom’s Residence, Kalwa (W)</p></div></div>
+        <div class="row3 rv"><i class="dot"></i><div class="t"><p class="k">Thu · 26 November 2026</p><p class="time">12:14 PM</p><i class="orn"></i><p class="name">The Wedding</p><p class="sub">The Palace Banquets, Mulund (W)</p></div></div>
       </div>
     </section>
 
     <!-- HALDI SOHALA -->
     <section class="sec haldi">
-      <div class="hero-s a float rv"></div>
+      <div class="bowl a float rv"></div>
       <h2 class="rv" style="--d:.1s;color:var(--haldi)">Haldi Sohala</h2>
       <p class="scr rv" style="--d:.2s;color:var(--haldi)">Rang, Riwaaj &amp; Anand</p>
       <div class="div dr" style="--d:.25s"></div>
@@ -305,7 +339,7 @@ h2{margin:0;font:500 8.4cqw/1.15 'Playfair Display',Georgia,serif;letter-spacing
 
     <!-- THE WEDDING -->
     <section class="sec">
-      <div class="mund a sway rv"></div>
+      <div class="kal a float rv"></div>
       <h2 class="rv" style="--d:.1s">The Wedding</h2>
       <p class="scr rv" style="--d:.2s">Mangal Parinay</p>
       <div class="div dr" style="--d:.25s"></div>
@@ -319,36 +353,32 @@ h2{margin:0;font:500 8.4cqw/1.15 'Playfair Display',Georgia,serif;letter-spacing
       <div class="base rv" style="--d:.7s"></div>
     </section>
 
-    <!-- PEHERAV -->
-    <section class="sec">
-      <div class="crown dr"></div>
-      <h2 class="rv">Peherav</h2>
-      <p class="k rv" style="--d:.1s">Dress Code</p>
-      <div class="div dr" style="--d:.15s"></div>
-      <p class="scr rv" style="--d:.2s">Tradition, Elegance &amp; Timeless Charm</p>
-      <p class="big rv" style="--d:.25s">Traditional Indian Attire</p>
-      <div class="dress">
-        <figure class="rv" style="--d:.3s"><div class="fig woman"></div><p class="k">For the Ladies</p><p>Paithani or silk sarees, or graceful ethnic ensembles.</p></figure>
-        <figure class="rv" style="--d:.45s"><div class="fig man"></div><p class="k">For the Gentlemen</p><p>Kurta-pyjamas, bandhgalas or elegant sherwanis.</p></figure>
+    <section class="sec dc haldi">
+      <div class="dc-ico a rv" style="background-image:var(--bowl)"></div>
+      <h2 class="rv" style="--d:.1s">Haldi Ceremony</h2>
+      <p class="k rv" style="--d:.15s">Dress Code</p>
+      <p class="scr rv" style="--d:.2s">Bright, Joyful &amp; Effortlessly Elegant</p>
+      <div class="div dr" style="--d:.25s"></div>
+      <div class="cyc rv" style="--d:.3s">
+        <div class="slide"><p class="pill">For the Ladies</p><p class="desc">Pastel or bright coloured sarees, lehengas, shararas or ethnic ensembles.</p><div class="ppl" style="background-image:var(--dcHLp)"></div></div>
+        <div class="slide"><p class="pill">For the Gentlemen</p><p class="desc">Kurta-pyjamas, bandhgalas or elegant ethnic wear in light and vibrant colours.</p><div class="ppl" style="background-image:var(--dcHGp)"></div></div>
       </div>
     </section>
 
-    <!-- THE WHOLE FAMILY -->
-    <section class="sec">
-      <h2 class="rv">For the Whole Family</h2>
-      <div class="div dr" style="--d:.1s"></div>
-      <div class="family rv" style="--d:.2s"></div>
-      <div class="pair">
-        <div class="rv" style="--d:.3s"><p class="k">The Elders</p><p>Nauvari sarees; dhoti-kurta with topi or pheta.</p></div>
-        <div class="rv" style="--d:.4s"><p class="k">The Little Ones</p><p>Parkar-polka; kurta-pyjama with a little pheta.</p></div>
+    <section class="sec dc ">
+      <div class="dc-ico a rv" style="background-image:var(--kalash2)"></div>
+      <h2 class="rv" style="--d:.1s">The Wedding</h2>
+      <p class="k rv" style="--d:.15s">Dress Code</p>
+      <p class="scr rv" style="--d:.2s">Tradition, Elegance &amp; Timeless Charm</p>
+      <div class="div dr" style="--d:.25s"></div>
+      <div class="cyc rv" style="--d:.3s">
+        <div class="slide"><p class="pill">For the Ladies</p><p class="desc">Paithani or silk sarees, or graceful ethnic ensembles.</p><div class="ppl" style="background-image:var(--dcWLp)"></div></div>
+        <div class="slide"><p class="pill">For the Gentlemen</p><p class="desc">Kurta-pyjamas, bandhgalas or elegant sherwanis.</p><div class="ppl" style="background-image:var(--dcWGp)"></div></div>
       </div>
-      <p class="it lead rv" style="--d:.5s">Celebrate the occasion in the spirit of our traditions.</p>
-      <div class="base rv" style="--d:.6s"></div>
     </section>
 
     <!-- TOGETHER -->
     <section class="sec end" id="sEnd">
-      <div class="crown dr"></div>
       <div class="finale-wrap">
         <div class="arch rv"><div></div></div>
         <i class="pk lf rv" style="--d:.4s"></i><i class="pk rt rv" style="--d:.55s"></i>
