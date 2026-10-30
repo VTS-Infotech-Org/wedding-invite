@@ -69,7 +69,7 @@ body{display:grid;place-items:center}
    ========================================================================= */
 :root{--w:min(100vw,calc(100dvh*.56));
  --gold:#8a5d1e;--ink:#3b2610;--soft:#5e4224;--haldi:#a8650a;--ease:cubic-bezier(.2,.7,.2,1);
- --seal:url(img/8991debe33.webp);--n1:url(img/558fd2f7f7.webp);--n2:url(img/92bd5f5dea.webp);--amp:url(img/01ff14057b.webp);--couple:url(img/38dbd36118.webp);--paper:url(img/b90bbd08ac.webp);--shrineH:url(img/219b1abf67.webp);--shrineS:url(img/d21bb243bd.webp);--bowl:url(img/fc1a710e58.webp);--kalash2:url(img/84018e16dd.webp);--dcHLp:url(img/7350c6a8e0.webp);--dcHGp:url(img/e7a7971a8e.webp);--dcWLp:url(img/ba07fca705.webp);--dcWGp:url(img/8fdcc3e31e.webp);--ganesha:url(img/04eb5898e1.webp);--crown:url(img/412224dedc.webp);--base:url(img/44978dea03.webp);--toran:url(img/b5af8e2aab.webp);--elephant:url(img/dbc5f670f9.webp);--peacock:url(img/2d43692c6e.webp);--corner:url(img/d3acd6f320.webp);--family:url(img/d67e2535f2.webp);--woman:url(img/49a6779f99.webp);--man:url(img/3a27c98b34.webp);--haldi:url(img/5be8a888f0.webp);--kalash:url(img/e378f15225.webp);--diya:url(img/76e7ace21e.webp);--jharokha:url(img/ce360bbb09.webp);--mundavalya:url(img/8be7aeafc5.webp);--div:url(img/f479d16fc0.webp);--finial:url(img/ecb5958d17.webp);}
+ --seal:url(img/8991debe33.webp);--n1:url(img/558fd2f7f7.webp);--n2:url(img/92bd5f5dea.webp);--amp:url(img/01ff14057b.webp);--couple:url(img/38dbd36118.webp);--paper:url(img/b90bbd08ac.webp);--pgHL:url(img/1bf1b3acdf.webp);--pgHG:url(img/8826a96d0e.webp);--pgWL:url(img/4f344aa85b.webp);--pgWG:url(img/bb81247e8a.webp);--shrineH:url(img/219b1abf67.webp);--shrineS:url(img/d21bb243bd.webp);--bowl:url(img/fc1a710e58.webp);--kalash2:url(img/84018e16dd.webp);--dcHLp:url(img/7350c6a8e0.webp);--dcHGp:url(img/e7a7971a8e.webp);--dcWLp:url(img/ba07fca705.webp);--dcWGp:url(img/8fdcc3e31e.webp);--ganesha:url(img/04eb5898e1.webp);--crown:url(img/412224dedc.webp);--base:url(img/44978dea03.webp);--toran:url(img/b5af8e2aab.webp);--elephant:url(img/dbc5f670f9.webp);--peacock:url(img/2d43692c6e.webp);--corner:url(img/d3acd6f320.webp);--family:url(img/d67e2535f2.webp);--woman:url(img/49a6779f99.webp);--man:url(img/3a27c98b34.webp);--haldi:url(img/5be8a888f0.webp);--kalash:url(img/e378f15225.webp);--diya:url(img/76e7ace21e.webp);--jharokha:url(img/ce360bbb09.webp);--mundavalya:url(img/8be7aeafc5.webp);--div:url(img/f479d16fc0.webp);--finial:url(img/ecb5958d17.webp);}
 @media (max-width:600px){:root{--w:100vw}}
 html,body{background:#f3ead8}
 .stage{width:var(--w);height:100dvh;aspect-ratio:auto;perspective:none;scrollbar-width:none;background:#f3ead8}
@@ -252,6 +252,13 @@ h2{margin:0;font:500 8.4cqw/1.15 'Playfair Display',Georgia,serif;letter-spacing
 .desc{min-height:15cqw;padding:0 2cqw}
 .ppl{width:108cqw;max-width:108cqw;margin:0 -9cqw;aspect-ratio:1.31;background:center bottom/contain no-repeat}
 @media (prefers-reduced-motion:reduce){.slide{animation:none}.slide+.slide{display:none}}
+
+/* full-page dress code boards, full bleed; a soft-edged sweep swaps ladies and gentlemen */
+.dcpage{position:relative;width:100%;aspect-ratio:941/1672;overflow:hidden}
+.dcpage .pg{position:absolute;inset:0;background:center/cover no-repeat}
+.dcpage .sweep{-webkit-mask:linear-gradient(100deg,#000 40%,transparent 60%) 100% 0/300% 100% no-repeat;mask:linear-gradient(100deg,#000 40%,transparent 60%) 100% 0/300% 100% no-repeat;animation:sweep 12s cubic-bezier(.6,0,.3,1) infinite}
+@keyframes sweep{0%,36%{-webkit-mask-position:100% 0;mask-position:100% 0}50%,86%{-webkit-mask-position:0 0;mask-position:0 0}100%{-webkit-mask-position:100% 0;mask-position:100% 0}}
+@media (prefers-reduced-motion:reduce){.dcpage .sweep{animation:none;display:none}}
 </style></head><body>
 <main class="stage" id="stage"><div class="env" id="env">
   <div class="l lining"></div>
@@ -353,28 +360,14 @@ h2{margin:0;font:500 8.4cqw/1.15 'Playfair Display',Georgia,serif;letter-spacing
       <div class="base rv" style="--d:.7s"></div>
     </section>
 
-    <section class="sec dc haldi">
-      <div class="dc-ico a rv" style="background-image:var(--bowl)"></div>
-      <h2 class="rv" style="--d:.1s">Haldi Ceremony</h2>
-      <p class="k rv" style="--d:.15s">Dress Code</p>
-      <p class="scr rv" style="--d:.2s">Bright, Joyful &amp; Effortlessly Elegant</p>
-      <div class="div dr" style="--d:.25s"></div>
-      <div class="cyc rv" style="--d:.3s">
-        <div class="slide"><p class="pill">For the Ladies</p><p class="desc">Pastel or bright coloured sarees, lehengas, shararas or ethnic ensembles.</p><div class="ppl" style="background-image:var(--dcHLp)"></div></div>
-        <div class="slide"><p class="pill">For the Gentlemen</p><p class="desc">Kurta-pyjamas, bandhgalas or elegant ethnic wear in light and vibrant colours.</p><div class="ppl" style="background-image:var(--dcHGp)"></div></div>
-      </div>
+    <!-- Haldi DRESS CODE: the client's full pages; gentlemen sweep softly over ladies and back -->
+    <section class="dcpage rv" aria-label="Haldi dress code">
+      <i class="pg" style="background-image:var(--pgHL)"></i><i class="pg sweep" style="background-image:var(--pgHG)"></i>
     </section>
 
-    <section class="sec dc ">
-      <div class="dc-ico a rv" style="background-image:var(--kalash2)"></div>
-      <h2 class="rv" style="--d:.1s">The Wedding</h2>
-      <p class="k rv" style="--d:.15s">Dress Code</p>
-      <p class="scr rv" style="--d:.2s">Tradition, Elegance &amp; Timeless Charm</p>
-      <div class="div dr" style="--d:.25s"></div>
-      <div class="cyc rv" style="--d:.3s">
-        <div class="slide"><p class="pill">For the Ladies</p><p class="desc">Paithani or silk sarees, or graceful ethnic ensembles.</p><div class="ppl" style="background-image:var(--dcWLp)"></div></div>
-        <div class="slide"><p class="pill">For the Gentlemen</p><p class="desc">Kurta-pyjamas, bandhgalas or elegant sherwanis.</p><div class="ppl" style="background-image:var(--dcWGp)"></div></div>
-      </div>
+    <!-- Wedding DRESS CODE: the client's full pages; gentlemen sweep softly over ladies and back -->
+    <section class="dcpage rv" aria-label="Wedding dress code">
+      <i class="pg" style="background-image:var(--pgWL)"></i><i class="pg sweep" style="background-image:var(--pgWG)"></i>
     </section>
 
     <!-- TOGETHER -->
